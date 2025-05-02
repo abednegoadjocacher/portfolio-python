@@ -16,3 +16,6 @@ Third project is text formatter
 The project accepts user input.
 Change the format of the data accepted from the user to suits the user choice.
 I handle if user error when option is selected
+
+Project four is a word scrambler more like it shuffles the word being provided with.
+The project accept user input and runs until user Quite it by pressing "q"
