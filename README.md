@@ -19,3 +19,6 @@ I handle if user error when option is selected
 
 Project four is a word scrambler more like it shuffles the word being provided with.
 The project accept user input and runs until user Quite it by pressing "q"
+
+project five is a calculator. Unfortunately I want  my calculator to be more responsive to user input.
+I have some bugs to fix to make it more efficient.
