@@ -8,30 +8,47 @@
 # 4. update task
 # 5. Exit
 
+def addTask():
+    tasks.append(task_name)
+
+def viewTask():
+    if tasks:
+        for task in tasks:
+            print(task)
+    else:
+        print("You have not added any task yet!!")
+
+def removeTask():
+    if tasks:
+        tasks.pop()
+    else:
+        print("There is no task to remove!!")
+    
+
 tasks = []
 print("""What do you want to do?
     1. Add new task
     2. View tasks
     3. remove task
-    4. update task
-    5. Exit    """)
+    4. Exit    """)
 
 while True:
     try:
-        operation = int(input("Select from (1-5): "))
+        operation = int(input("Select from (1-4: "))
         
         if operation == 1:
             task_name = input("Enter you new task: ")
-            tasks.append(task_name)
+            addTask()
+            #tasks.append(task_name)
         elif operation == 2:
-            for task in tasks:
-                print(task)
+            viewTask()
         elif operation == 3:
-            tasks.remove()
-            print(task)
-        elif operation == 5:
+            removeTask()
+        elif operation == 4:
             print("closing task")
             break
+        else:
+            print("Please read the instructions well")
 
-    except:
-        pass
+    except ValueError:
+        print("Invalid input")
