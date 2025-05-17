@@ -2,9 +2,13 @@ def add(x,y):
     return x + y
 
 def division(x,y):
-    if y == 0:
-        print("A number can not be divide by 0")
-    return x / y
+    try:
+        # if y == 0:
+            # print("A number can not be divide by 0")
+        return x / y
+    except ZeroDivisionError:
+        print("""Division operation can not be perform!!
+A number can not be divide by 0""")
 
 
 def subtract(x,y):
@@ -43,7 +47,10 @@ def main():
 
 
             elif option == 2:
-                print(f"The Division of {first_num} and {second_num} is : ", division(first_num, second_num))
+                if second_num == 0:
+                    print(f"The Division of {first_num} and {second_num} is : Undefine")
+                else:
+                    print(f"The Division of {first_num} and {second_num} is : ", division(first_num, second_num))
 
             elif option == 3:
                 print(f"The difference of {first_num} and {second_num} is : ", subtract(first_num, second_num))
@@ -56,6 +63,14 @@ def main():
 
             else:
                 print("No such option!!!")
+
+
+                if again.lower().startswith("n"):
+                    break
+                    # elif again.lower() is not "n" or "y": I have some bug tto solve here.
+                    #     print("Sorry Incorrect response")
+                    #     return
+               
         except ValueError:
             print("❌❌Invalid input!!")
 
