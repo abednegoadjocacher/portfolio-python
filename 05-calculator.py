@@ -1,87 +1,75 @@
 def add(x,y):
-    return x + y
+    print(f"The sum of {x} and {y} is : ", x + y)
 
 def division(x,y):
-    try:
-        # if y == 0:
-            # print("A number can not be divide by 0")
-        return x / y
-    except ZeroDivisionError:
-        print("""Division operation can not be perform!!
-A number can not be divide by 0""")
-
+    if y == 0:
+        print(f"The Division of {x} and {y} is : Undefine")
+    else:
+        print(f"The difference of {x} and {y} is :", x / y)
 
 def subtract(x,y):
-    return x - y
-
+    print(f"The difference of {x} and {y} is : ", x - y)
 
 def multiple(x,y):
-    return x * y
-
+    print(f"The product of {x} and {y} is : ", x * y)
 
 def modulo(x,y):
-    return x % y
-
+    if y == 0:
+        print(f"The modulo of {x} and {y} is undefine")
+    
+    else:
+        print(f"The modulo of {x} and {y} is : ", x % y)
 
 
 
 def main():
     print("""
-        Selection your operation
-        1. Addition
-        2. Division
-        3. Subtraction
-        4. Multiplication
-        5. Modulo
-    """)
-
+                Selection your operation
+                    1. Addition
+                    2. Division
+                    3. Subtraction
+                    4. Multiplication
+                    5. Modulo
+            """)
     while True:
         try:
-            option = int(input("Select from (1-5): "))
-
-            first_num = int(input("Enter first number: "))
-            second_num = int(input("Enter second number: "))
-
+            option = int(input("Select an operation from (1-5): "))
+            if option > 5 or option == 0:
+                print("No such option!!!")
+                continue
+            else:
+                first_num = int(input("Enter first number: "))
+                second_num = int(input("Enter second number: "))
+            
             if option == 1:
-                print(f"The sum of {first_num} and {second_num} is : ", add(first_num, second_num))
-
+                add(first_num, second_num)
 
             elif option == 2:
-                if second_num == 0:
-                    print(f"The Division of {first_num} and {second_num} is : Undefine")
-                else:
-                    print(f"The Division of {first_num} and {second_num} is : ", division(first_num, second_num))
+                division(first_num, second_num)
 
             elif option == 3:
-                print(f"The difference of {first_num} and {second_num} is : ", subtract(first_num, second_num))
+                subtract(first_num, second_num)
 
             elif option == 4:
-                print(f"The product of {first_num} and {second_num} is : ", multiple(first_num, second_num))
+                multiple(first_num, second_num)
 
             elif option == 5:
-                print(f"The modulo of {first_num} and {second_num} is : ", modulo(first_num, second_num))
+                modulo(first_num, second_num)
 
+
+            tryAgain = input("Do you want too quit? (Yes Or No) ")
+            if tryAgain.lower().startswith('y'):
+                print("Good Bye👋👋")
+                break
+            elif tryAgain.lower().startswith('n'):
+                continue
             else:
-                print("No such option!!!")
+                print(f"'{tryAgain}' is not an option!!")
+                break
 
 
-                if again.lower().startswith("n"):
-                    break
-                    # elif again.lower() is not "n" or "y": I have some bug tto solve here.
-                    #     print("Sorry Incorrect response")
-                    #     return
-               
         except ValueError:
-            print("❌❌Invalid input!!")
-
-
-        again = input("Do you want too quit? (Yes Or No)")
-        if again.lower().startswith("n"):
-            break
-        # elif again.lower() is not "n" or "y": I have some bug tto solve here.
-        #     print("Sorry Incorrect response")
-        #     return
-        else:
-            main()
+            print("❌❌Invalid option!!")
+        
 
 main()
