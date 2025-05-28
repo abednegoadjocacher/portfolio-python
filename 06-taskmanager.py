@@ -34,7 +34,7 @@ print("""What do you want to do?
 
 while True:
     try:
-        operation = int(input("Select from (1-4: "))
+        operation = int(input("Select from (1-4): "))
         
         if operation == 1:
             task_name = input("Enter you new task: ")
