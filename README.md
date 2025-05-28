@@ -22,6 +22,7 @@ The project accept user input and runs until user Quite it by pressing "q"
 
 project five is a calculator. Unfortunately I want  my calculator to be more responsive to user input.
 I have some bugs to fix to make it more efficient.
+On 28th May, 2025 the bugs are all fixed. The calculator accept user input and check for valid input before performing an action.
 
 Project six is task manager. I called it task manage but people would prefer to call it to do list. I have just implemented one face of it where you can add tasks to you list. I have complete the project.
 I did implemented the remove task, view task and end operation.
