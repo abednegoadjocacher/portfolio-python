@@ -3,9 +3,9 @@ def add(x,y):
 
 def division(x,y):
     if y == 0:
-        print(f"The Division of {x} and {y} is : Undefine")
+        print(f"The Division of {x} and {y} is : Undefined")
     else:
-        print(f"The difference of {x} and {y} is :", x / y)
+        print(f"The division of {x} and {y} is :", x / y)
 
 def subtract(x,y):
     print(f"The difference of {x} and {y} is : ", x - y)
@@ -15,7 +15,7 @@ def multiple(x,y):
 
 def modulo(x,y):
     if y == 0:
-        print(f"The modulo of {x} and {y} is undefine")
+        print(f"The modulo of {x} and {y} is undefined")
     
     else:
         print(f"The modulo of {x} and {y} is : ", x % y)
@@ -57,7 +57,7 @@ def main():
                 modulo(first_num, second_num)
 
 
-            tryAgain = input("Do you want too quit? (Yes Or No) ")
+            tryAgain = input("Do you want to quit? (Yes Or No) ")
             if tryAgain.lower().startswith('y'):
                 print("Good Bye👋👋")
                 break
